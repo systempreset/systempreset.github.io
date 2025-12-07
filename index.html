@@ -18,8 +18,8 @@
     }
 
     svg {
-      width: 60vw;
-      max-width: 600px;
+      width: 90vw; /* increased ~50% */
+      max-width: 900px;
     }
 
     /* Animate the gradient itself */
@@ -41,20 +41,22 @@
     <linearGradient
       id="animatedGradient"
       x1="0%" y1="0%"
-      x2="200%" y2="0%"
-      gradientUnits="objectBoundingBox"
+      x2="100%" y2="0%"
+      gradientUnits="userSpaceOnUse"
     >
       <stop offset="0%" stop-color="#7dd3fc" />
       <stop offset="25%" stop-color="#a5b4fc" />
       <stop offset="50%" stop-color="#f0abfc" />
       <stop offset="75%" stop-color="#fb7185" />
       <stop offset="100%" stop-color="#7dd3fc" />
+
+      <!-- Seamless loop: full-width translate -->
       <animateTransform
         attributeName="gradientTransform"
         type="translate"
         from="0 0"
-        to="-1 0"
-        dur="8s"
+        to="1000 0"
+        dur="10s"
         repeatCount="indefinite" />
     </linearGradient>
 
